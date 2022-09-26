@@ -1,0 +1,16 @@
+1.
+def solution(n):
+    m = 1
+    a = []
+    for m in range(1, n+1):
+        if n % m == 0:
+            a.append(m)
+            
+    answer = sum(a)
+    return answer
+
+2.
+#다른 사람 풀이
+def sumDivisor(num):
+    return num + sum([i for i in range(1, (num // 2) + 1) if num % i == 0])
+#num/2의 수로만 for를 돌려서 sum을 하고 num을 돌린다,,,, 와 신기신기
