@@ -1,0 +1,19 @@
+#나)
+
+def solution(x):
+    #y값에 x를 한번 더 저장
+    y = x
+    answer = 0
+    #자릿수 합 구하는 방식이랑 동일
+    while (x>0):
+        answer += x%10
+        x = x//10
+    #나머지가 0일 경우 하샤드 수 이므로 맞다면 True반환
+    return y%answer ==0
+
+#타인)
+
+def solution(n):
+    return n % sum([int(c) for c in str(n)]) == 0
+#그냥 바로 자릿수 합 구하는 것을 return 값에 넣어서 구했네
+#한 줄로 만들 수 있게끔 노력해야겠다

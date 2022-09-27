@@ -1,0 +1,25 @@
+#나)
+
+def solution(n):
+    answer = 0
+    while (n>0):
+        #if문 돌때까지 answer에 +1를 계속 반복
+        answer +=1
+        #제곱이 되는지 확인할려면 나눴을 때 같은 값이 되면 될것이다.
+        if n/answer == answer:
+            return (answer+1)**2
+        #제곱되는지 이 방식으로도 확인이 가능하기는 하다
+        #만일 제곱해서 n보다 크다면 제곱이 되는것이 아니기에 -1를 해준다
+        elif n<answer**2:
+            return -1
+#시간이 오래 걸리는 것이 존재
+#다른 방식도 봐야할듯
+
+#타인)
+
+def solution(n):
+    sqrt = n ** (1/2)
+    if sqrt % 1 == 0:
+        return (sqrt + 1) ** 2
+    return -1
+#제곱근 형식을 사용해서 런타임을 감소시킴

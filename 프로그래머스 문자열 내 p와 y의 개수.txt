@@ -1,0 +1,27 @@
+#나)
+
+def solution(s):
+    #대소문자 구별을 안하지만 하나로 통일 시켜주기 위해 upper나 lower 사용하기
+    s = s.upper()
+    #문자를 리스트에 하나씩 분리해서 저장하기
+    s = list(str(s))
+    #p와 y의 갯수 출력할 변수 생성
+    p =0
+    y =0
+    #p와 y의 갯수를 세기 위해 for문 돌리기
+    for i in s:
+        if i =='P':
+            p+=1
+        elif i =='Y':
+            y+=1
+    #같은 수 이거나 하나도 없으면 True반환 아니면 False 반환        
+    if p==y:
+        return True
+    else:
+        return False
+
+#타인)
+def solution(s):
+    return s.lower().count('p') == s.lower().count('y')
+#어차피 같으면 True를 반환하니까 count를 사용해서 바로 한줄로 쓸 수 있네
+#count()괄호 안에 값을 넣으면 갯수를 반환한다는 점

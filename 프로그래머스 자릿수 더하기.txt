@@ -1,0 +1,28 @@
+#나)
+
+def solution(n):
+    #a를 처음에 0으로 고정시키기
+    a = 0
+    #while문을 돌려 n이 0보다 클 때까지 계속 반복해주기
+    while (n>0):
+        #a에다가는 10으로 나눈 나머지를 넣어줌
+        a += n%10
+        #n을 10의 몫으로 반환해서 다시 while문을 돌게끔 만듦
+        n = n//10
+        #a에다가 계속 +를 시켰기에 a만 반환해주면 됨
+    return a
+
+#타인)
+
+def sum_digit(number):
+    if number < 10:
+        return number;
+    return (number % 10) + sum_digit(number // 10)
+#10보다 작을 때는 그 값을 바로 반환해준다는 것을 추가해줌
+#sum_digit을 사용해서 while문을 사용안해도 된다는 점
+
+
+def sum_digit(number):
+    return sum([int(i) for i in str(number)])
+#str로 바꿔서 하나하나 개별 값을 가져온다
+#가져온 값이 str형태이기에 int()형태로 변환 이후 리스트로 만들어주고 sum을 사용해서 자릿수 합을 구해준다
