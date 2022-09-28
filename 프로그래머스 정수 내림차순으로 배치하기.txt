@@ -1,0 +1,25 @@
+#나)
+
+def solution(n):
+    #n을 하나씩 분리해서 리스트에 저장 (저장 이유는 sort를 위해)
+    answer = [int(i) for i in str(n)]
+    #작은 수부터 정렬(큰 수부터 할려면 reverse = True)
+    answer.sort()
+    #답으로 추가할 a와 10의 제곱수 b를 생성
+    a = 0
+    b = 0    
+    #작은 수부터 10^b를 곱하여 a에 더해주기
+    #b 하나씩 증가 시키기
+    for j in answer:
+        a += j*10**b
+        b +=1
+    return a
+
+#타인)
+
+def solution(n):
+    ls = list(str(n))
+    ls.sort(reverse = True)
+    return int("".join(ls))
+#리스트 형태로 만든 다음 큰 수부터 정렬
+# join을 이용한 후 int()형태로 전환하고 반환
