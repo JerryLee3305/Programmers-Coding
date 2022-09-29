@@ -1,0 +1,37 @@
+#나)
+def solution(num):
+    #초기 answer 값 0으로 지정
+    answer = 0
+    #num이 1인지 0인지에 따라서 조건문 작성
+    if num >1:
+        #1이 될때까지 계속 반복을 시키기
+        while (num>1):
+            #짝수, 홀수 구분해서 작업 진행
+            if num %2 ==0:
+                num = num//2
+                answer +=1
+            elif num%2 ==1:
+                num = num*3 +1
+                answer +=1
+        #answer가 500보다 작다면 그대로 반환하고 이상이면 -1로
+        if answer <500:
+            return answer
+        else:
+            return -1
+    else:
+        return 0
+
+#타인)
+def solution(num):
+    answer = 0
+    while num!=1:
+        if num%2==0:
+            num=num/2
+        else:
+            num=3*num+1
+        answer=answer+1
+        if answer>500:
+            return -1
+    return answer
+#비슷하게 작성을 했으나 if문을 좀 덜 사용
+#과도하게 if를 안쓰도록 주의
