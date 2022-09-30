@@ -1,0 +1,18 @@
+#나)
+def solution(a, b):
+    answer = 0
+    #a<=b일 때, a에 하나씩 추가하면서 b랑 같아질때까지 answer에 a를 더해주면서 a를 하나씩 증가
+    if a<=b:
+        while (a<=b):
+            answer += a
+            a+=1
+    else:
+        while (b<=a):
+            answer += b
+            b+=1
+    return answer
+
+#타인)
+def solution(a, b):
+    if a > b: a, b = b, a
+    return sum(range(a,b+1))
