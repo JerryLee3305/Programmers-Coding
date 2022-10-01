@@ -1,0 +1,18 @@
+#나)
+def solution(seoul):
+    #count에 Kim의 위치를 파악
+    count = 0
+    #Kim이 나올 때까지 seoul에서 하나씩 for문을 돌림
+    for i in seoul:
+        if i == 'Kim':
+            #count는 숫자이기에 문자랑 결합하기 위하여 str(count)사용
+            answer = '김서방은 '+str(count)+'에 있다'
+            #Kim이 아닐때 count를 하나씩 이동해서 위치 파악
+        else:
+            count+=1
+    return answer
+
+#타인)
+def solution(seoul):
+    return "김서방은 {}에 있다".format(seoul.index('Kim'))
+#index를 사용해서 Kim이 있는 곳의 위치를 바로 반환할 수 있도록 함
