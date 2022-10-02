@@ -1,0 +1,14 @@
+#나)
+def solution(phone_number):
+    #number에 마지막 4자리 숫자 저장
+    number = phone_number[-4:]
+    #star에 *개수 저장해 출력 저장
+    star = '*'*(len(phone_number)-4)
+    #answer에 두개 합
+    answer = star+number
+    return answer
+
+#타인)
+def solution(s):
+    return "*"*(len(s)-4) + s[-4:]
+#한줄로 적을 수 있는 것을 나눠썼네,,,
