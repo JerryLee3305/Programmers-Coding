@@ -1,0 +1,20 @@
+#나)
+def solution(arr, divisor):
+    #정답을 담을 빈 리스트 생성
+    answer = []
+    #arr에서 하나씩 가져와서 divisor로 나눠 나머지 0인 것을 확인하여 answer에 추가
+    for i in arr:
+        if int(i)%divisor ==0:
+            answer.append(i)
+    #아무것도 안담기면 -1 출력
+    if answer == []:
+        answer.append(-1)
+    #오른차순 정렬하여 출력
+    else:
+        answer.sort()
+    return answer
+
+#타인)
+def solution(arr, divisor): 
+    return sorted([n for n in arr if n%divisor == 0]) or [-1]
+#or를 쓰면 앞이 참일 경우 해당 값까지만 나오고 거짓이면 뒤에 있는 것 호출
