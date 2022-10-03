@@ -1,0 +1,14 @@
+#나)
+def solution(arr):
+    #remove를 이용해 arr에서 최소의 값을 제거
+    arr.remove(min(arr))
+    #제거 했는데 아무 것도 없을 시 -1을 넣어 줌
+    if arr ==[]:
+        arr = [-1]
+    return arr
+
+#타인)
+def solution(mylist):
+    return [i for i in mylist if i > min(mylist)] or [-1]
+#최소의 값보다 큰 것을 반환 시키는 리스트
+#or를 이용해 아무것도 없어서 False를 반환할 시 [-1] 출력
