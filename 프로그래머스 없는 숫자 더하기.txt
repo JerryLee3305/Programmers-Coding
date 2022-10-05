@@ -1,0 +1,16 @@
+#나)
+def solution(numbers):
+    #초기 answer값 저장
+    answer = 0
+    #0~9까지 반복
+    for i in range(10):
+        #numbers에 0~9가 없다면 answer에 더해줌
+        if i not in numbers:
+            answer += i
+    return answer
+
+
+#타인)
+def solution(numbers):
+    return 45 - sum(numbers)
+#0~9까지의 전체 합이 45이고 모두 다른 숫자라고 했기에 45에서 numbers 전체의 합을 빼주면 없는 합이 나온다.
