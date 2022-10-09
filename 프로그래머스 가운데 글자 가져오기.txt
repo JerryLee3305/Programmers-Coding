@@ -1,0 +1,14 @@
+#나)
+def solution(s):
+    #글자 수가 홀수와 짝수 나눠서 계산
+    if len(s) %2==0:
+        #인덱스는 0부터 시작하므로 몫의 -1과 몫
+        return s[len(s)//2-1]+s[len(s)//2]
+    else:
+        return s[len(s)//2]
+
+#타인)
+def solution(s):
+        return s[(len(s)-1)//2:len(s)//2+1]
+#인덱스를 사용할 때는 어차피 1을 빼줘야함 -> 처음에 len(s)-1로 해서 처음의 수를 반환
+#슬라이싱 할 때는 +1이 있어야한다는 점
