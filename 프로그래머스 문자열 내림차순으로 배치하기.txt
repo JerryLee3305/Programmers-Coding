@@ -1,0 +1,9 @@
+#구글링
+def solution(s):
+    answer = ''.join(sorted(s, reverse=True))
+    return answer
+#문자열 배열을 잘 이해하지 못해서 구현하지 못한 코드
+#처음엔 대문자와 소문자를 구분해서 각각을 sort를 사용하려 했으나 그게 안되었음
+#구글링 결과 알파벳 순서대로, 대문자가 먼저 sort 된다는 점을 알게 됨
+#s를 리스트 만들어주고 sort(reverse=True) 까지는 할 수 있었겠지만 join을 사용해서 묶는다는 점을 또 구현하지 못했을 듯
+#문자열을 하나로 묶어줄 때는 join을 사용한다는 점 잊지 말기

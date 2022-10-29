@@ -1,0 +1,16 @@
+#구글링
+def solution(s):
+    if len(s) == 6 or len(s) == 4:
+        if s.isdigit():
+            return True
+    return False
+#길이는 구할 줄 알았으나 문자와 숫자로 구분되어 있을 때 어떻게 해야할지 몰랐음
+#처음엔 type형태가 int형태인지 확인할려고 했으나 ''안에 있어서 str 형태이기에 예시가 모두 false가 출력됨
+#그래서 구글링으로 int형태만 나오고 오류 나오면 fasle가 나오는 것을 찾다보니 try~except문이 있었고
+#다른 사람도 이렇게 풀었더라
+    try:
+        int(s)
+    except:
+        return False
+    return len(s) == 4 or len(s) == 6 
+#확실히 괜찮은 방법인듯

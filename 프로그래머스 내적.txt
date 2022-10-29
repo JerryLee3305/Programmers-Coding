@@ -1,0 +1,14 @@
+#나)
+def solution(a, b):
+    #초기 값 지정
+    answer = 0
+    #같은 값을 넣고 곱하면 되니까 for문 사용
+    for i in range(0, len(a)):
+        answer += a[i]*b[i]
+    return answer
+#처음 초기 생각은 transpose를 사용해서 내적을 구하는 방식을 이용하려고 np.transpose를 사용하려 했으나 실패
+
+
+#타인)
+return sum([x*y for x, y in zip(a,b)])
+#zip을 이용하여 그냥 곱해줘도 된다는 점,,,, 정말 놀라울 따름....
