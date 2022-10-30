@@ -1,0 +1,20 @@
+#나)
+#price가 계속 1씩 증가하므로 for문을 사용하면 됨
+#단) 1부터 시작하므로 범위는 1~count까지
+#total이라는 하나의 변수를 만들어 총 가격을 구해줌
+def solution(price, money, count):
+    total = 0
+    for i in range(1, count+1):
+        total += price*i
+    #돈이 더 많으면 0출력, total이 더 많으면 음수가 안나오게끔 total-money 사용
+    if money>=total:
+        return 0
+    else:
+        return total-money
+
+#타인)
+def solution(price, money, count):
+    return max(0,price*(count+1)*count//2-money)
+#등차수열 방법을 사용,,,,, 그저 놀라움
+#등차수열 계산하는 방법이 n(n+1)/2 이므로 여기서 n이 count
+#0아니면 빼준 값을 반환하므로 max를 이용해서 둘 중 하나를 출력하도록 함
